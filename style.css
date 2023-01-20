@@ -1,3 +1,7 @@
+/*  To Do: Variable grid? How to get the project grid to stretch to fill space
+    as window changes size and keep sidebar from getting too long and project/
+    announcements/trending to fill the page area? */
+
 :root {
     --main-color: #437ae0;
     --bg-color: #b9bec4;
@@ -99,7 +103,9 @@
 }
 .project-description {
     font-size: .9rem;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+    padding-bottom: 24px;
+    
 }
 .project-buttons {
     display: grid;
@@ -126,9 +132,12 @@
     box-shadow: 3px 5px 5px #888888;
 }
 .announcement {
-    padding-bottom: 6px;
-    padding-top: 6px;
+    padding-bottom: 12px;
+    padding-top: 12px;
     border-bottom: 1px solid #888888;
+}
+#last-announcement {
+    border-bottom: none;
 }
 .announcement-header {
     font-weight: bold;
@@ -147,5 +156,20 @@
     /* border: 1px solid red; */
     background-color: var(--secondary-color);
     padding: 16px;
+    gap:16px;
     box-shadow: 3px 5px 5px #888888;
+}
+.trending {
+    display:grid;
+    grid-auto-flow: column;
+    align-items: center;
+    /* justify-items: center; */
+}
+.trending-name {
+    font-weight: bold;
+    font-size: .9rem;
+    justify-self: left;
+}
+.trending-slogan {
+    font-size: .8rem;
 }
